@@ -1,20 +1,21 @@
 ### IMPORTS ###
+import trunkFileDir
 
+### RANDOM CRAP ###
+
+testKit = True
 
 
 ### CLASSES ###
 
 class node:
-
     def __init__(self, nodeId, active, rootDir, rootDirFile):
         self.nodeId = nodeId
         self.active = active
         self.rootDir = rootDir
         self.rootDirFile = rootDirFile
-
-    def __del__(self):
-        nodeId = self.nodeId
-        print("Node ", nodeId, " deleted!")
+        if testKit == True:
+            print("Node ", self.nodeId, " created!")
 
     def ping(self):
         return(True)
@@ -33,6 +34,5 @@ class node:
 
     def fullDataQuery(self):
         return self.nodeId, self.active, self.rootDir, self.rootDirFile
-
 
 ### FUNCTIONS ###

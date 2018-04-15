@@ -1,5 +1,4 @@
 import rootLib
+import modelInitScript
 
-a = rootLib.node("000", True, True, "#")
-print(a.fullDataQuery())
-del a
+modelInitScript._2000.nodeFileCreate()
