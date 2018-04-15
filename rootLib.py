@@ -12,6 +12,10 @@ class node:
         self.rootDir = rootDir
         self.rootDirFile = rootDirFile
 
+    def __del__(self):
+        nodeId = self.nodeId
+        print("Node ", nodeId, " deleted!")
+
     def ping(self):
         return(True)
 
@@ -19,7 +23,7 @@ class node:
         return self.nodeId
 
     def activeQuery(self):
-            return self.active
+        return self.active
 
     def rootDirQuery(self):
         return self.rootDir
@@ -27,6 +31,8 @@ class node:
     def rootDirFileQuery(self):
         return self.rootDirFile
 
+    def fullDataQuery(self):
+        return self.nodeId, self.active, self.rootDir, self.rootDirFile
 
 
 ### FUNCTIONS ###
